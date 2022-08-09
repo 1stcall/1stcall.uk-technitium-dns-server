@@ -1,0 +1,80 @@
+[2022-08-06 19:06:42 UTC] Logging started.
+[2022-08-06 19:06:43 UTC] DHCP Server successfully saved scope file: /etc/dns/config/scopes/Default.scope
+[2022-08-06 19:06:43 UTC] DNS Server config file was not found: /etc/dns/config/dns.config
+[2022-08-06 19:06:43 UTC] DNS Server is restoring default config file.
+[2022-08-06 19:06:43 Local] Saved zone file for domain: ntp.org
+[2022-08-06 19:06:43 Local] DNS Server config file was saved: /etc/dns/config/dns.config
+[2022-08-06 19:06:43 Local] DNS Server successfully loaded zone file: /etc/dns/config/zones/ntp.org.zone
+[2022-08-06 19:06:43 Local] DNS Server is loading allowed zone file: /etc/dns/config/allowed.config
+[2022-08-06 19:06:43 Local] DNS Server is loading blocked zone file: /etc/dns/config/blocked.config
+[2022-08-06 19:06:43 Local] [0.0.0.0:53] [UDP] DNS Server was bound successfully.
+[2022-08-06 19:06:43 Local] [0.0.0.0:53] [TCP] DNS Server was bound successfully.
+[2022-08-06 19:06:43 Local] [0.0.0.0:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-06 19:06:43 Local] [[::]:53] [UDP] DNS Server was bound successfully.
+[2022-08-06 19:06:43 Local] [[::]:53] [TCP] DNS Server was bound successfully.
+[2022-08-06 19:06:43 Local] [[::]:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-06 19:06:43 Local] DHCP Server successfully loaded scope: Default
+[2022-08-06 19:06:43 Local] DHCP Server successfully loaded scope file: /etc/dns/config/scopes/Default.scope
+[2022-08-06 19:06:43 Local] [0.0.0.0:5380] HTTP Web Service was started successfully.
+[2022-08-06 19:06:43 Local] DNS Server (v8.1.4.0) was started successfully.
+[2022-08-06 19:06:53 Local] DHCP Server successfully unloaded scope: Default
+[2022-08-06 19:06:53 Local] DNS Server (v8.1.4.0) was stopped successfully.
+[2022-08-06 19:06:53 Local] Logging stopped.
+[2022-08-06 19:07:12 UTC] Logging started.
+[2022-08-06 19:07:12 UTC] DNS Server config file was loaded: /etc/dns/config/dns.config
+[2022-08-06 19:07:12 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/ntp.org.zone
+[2022-08-06 19:07:12 UTC] DNS Server is loading allowed zone file: /etc/dns/config/allowed.config
+[2022-08-06 19:07:13 UTC] DNS Server is loading blocked zone file: /etc/dns/config/blocked.config
+[2022-08-06 19:07:13 UTC] [0.0.0.0:53] [UDP] DNS Server was bound successfully.
+[2022-08-06 19:07:13 UTC] [0.0.0.0:53] [TCP] DNS Server was bound successfully.
+[2022-08-06 19:07:13 UTC] [0.0.0.0:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-06 19:07:13 UTC] [[::]:53] [UDP] DNS Server was bound successfully.
+[2022-08-06 19:07:13 UTC] [[::]:53] [TCP] DNS Server was bound successfully.
+[2022-08-06 19:07:13 UTC] [[::]:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-06 19:07:13 UTC] DHCP Server successfully loaded scope: Default
+[2022-08-06 19:07:13 UTC] DHCP Server successfully loaded scope file: /etc/dns/config/scopes/Default.scope
+[2022-08-06 19:07:13 UTC] [0.0.0.0:5380] HTTP Web Service was started successfully.
+[2022-08-06 19:07:13 UTC] DNS Server (v8.1.4.0) was started successfully.
+[2022-08-06 19:11:24 UTC] [172.21.0.1:41802] DnsServerCore.DnsWebServiceException: Invalid username or password for user: admin
+   at DnsServerCore.DnsWebService.LoginAsync(HttpListenerRequest request, JsonTextWriter jsonWriter) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 1057
+   at DnsServerCore.DnsWebService.ProcessRequestAsync(HttpListenerRequest request, HttpListenerResponse response) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 378
+[2022-08-06 19:11:49 UTC] [172.21.0.1:58436] [admin] User logged in.
+[2022-08-06 19:11:51 UTC] [172.21.0.1:58446] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-06 19:12:52 UTC] [172.21.0.1:58640] [admin] DNS Client imported record(s) for authoritative zone {server: this-server; zone: 1stcall.uk; type: A;}
+[2022-08-06 19:12:52 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-06 19:13:08 UTC] [172.21.0.1:58640] [admin] DNS Client imported record(s) for authoritative zone {server: this-server; zone: 1stcall.uk; type: AAAA;}
+[2022-08-06 19:13:08 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-06 19:16:03 UTC] [172.21.0.1:33378] [admin] Record was updated for authoritative zone {oldDomain: 1stcall.uk; domain: 1stcall.uk; type: NS; oldValue: ; value: ; ttl: 3600; disabled: False;}
+[2022-08-06 19:16:03 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-06 19:16:13 UTC] DNS Server failed to notify name server 'ns1.1stcall.uk' due to failure in resolving its IP address for zone: 1stcall.uk
+[2022-08-06 19:18:29 UTC] [172.21.0.1:38990] System.FormatException: An invalid IP address was specified.
+ ---> System.Net.Sockets.SocketException (22): Invalid argument
+   --- End of inner exception stack trace ---
+   at System.Net.IPAddressParser.Parse(ReadOnlySpan`1 ipSpan, Boolean tryParse)
+   at System.Net.IPAddress.Parse(String ipString)
+   at DnsServerCore.WebServiceZonesApi.AddRecord(HttpListenerRequest request, JsonTextWriter jsonWriter) in Z:\Technitium\Projects\DnsServer\DnsServerCore\WebServiceZonesApi.cs:line 1863
+   at DnsServerCore.DnsWebService.ProcessRequestAsync(HttpListenerRequest request, HttpListenerResponse response) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 827
+[2022-08-06 19:18:36 UTC] Saved zone file for domain: 0.0.c.5.2.0.0.c.0.2.0.c.3.0.6.2.ip6.arpa
+[2022-08-06 19:18:36 UTC] [172.21.0.1:38990] [admin] New record was added to authoritative zone {domain: 1stcall.uk; type: AAAA; value: ; ttl: 3600;}
+[2022-08-06 19:18:36 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-06 19:18:46 UTC] DNS Server failed to notify name server 'ns1.1stcall.uk' due to failure in resolving its IP address for zone: 1stcall.uk
+[2022-08-06 19:19:24 UTC] [172.21.0.1:50572] [admin] Record was updated for authoritative zone {oldDomain: 1stcall.uk; domain: 1stcall.uk; type: SOA; oldValue: ; value: ; ttl: 900; disabled: False;}
+[2022-08-06 19:19:24 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-06 20:12:29 UTC] Logging started.
+[2022-08-06 20:12:31 UTC] DNS Server config file was loaded: /etc/dns/config/dns.config
+[2022-08-06 20:12:32 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/ntp.org.zone
+[2022-08-06 20:12:32 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/1stcall.uk.zone
+[2022-08-06 20:12:32 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/0.0.c.5.2.0.0.c.0.2.0.c.3.0.6.2.ip6.arpa.zone
+[2022-08-06 20:12:32 UTC] DNS Server is loading allowed zone file: /etc/dns/config/allowed.config
+[2022-08-06 20:12:32 UTC] DNS Server is loading blocked zone file: /etc/dns/config/blocked.config
+[2022-08-06 20:12:33 UTC] [0.0.0.0:53] [UDP] DNS Server was bound successfully.
+[2022-08-06 20:12:33 UTC] [0.0.0.0:53] [TCP] DNS Server was bound successfully.
+[2022-08-06 20:12:33 UTC] [0.0.0.0:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-06 20:12:33 UTC] [[::]:53] [UDP] DNS Server was bound successfully.
+[2022-08-06 20:12:33 UTC] [[::]:53] [TCP] DNS Server was bound successfully.
+[2022-08-06 20:12:33 UTC] [[::]:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-06 20:12:34 UTC] DHCP Server successfully loaded scope: Default
+[2022-08-06 20:12:34 UTC] DHCP Server successfully loaded scope file: /etc/dns/config/scopes/Default.scope
+[2022-08-06 20:12:35 UTC] [0.0.0.0:5380] HTTP Web Service was started successfully.
+[2022-08-06 20:12:35 UTC] DNS Server (v8.1.4.0) was started successfully.
+[2022-08-07 10:19:21 UTC] Logging stopped.

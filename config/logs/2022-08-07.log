@@ -1,0 +1,103 @@
+[2022-08-07 10:19:21 UTC] Logging started.
+[2022-08-07 10:19:21 UTC] DHCP Server successfully unloaded scope: Default
+[2022-08-07 10:19:22 UTC] Logging stopped.
+[2022-08-07 10:22:41 UTC] Logging started.
+[2022-08-07 10:22:42 UTC] DNS Server config file was loaded: /etc/dns/config/dns.config
+[2022-08-07 10:22:42 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/ntp.org.zone
+[2022-08-07 10:22:42 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/1stcall.uk.zone
+[2022-08-07 10:22:42 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/0.0.c.5.2.0.0.c.0.2.0.c.3.0.6.2.ip6.arpa.zone
+[2022-08-07 10:22:42 UTC] DNS Server is loading allowed zone file: /etc/dns/config/allowed.config
+[2022-08-07 10:22:42 UTC] DNS Server is loading blocked zone file: /etc/dns/config/blocked.config
+[2022-08-07 10:22:42 UTC] [0.0.0.0:53] [UDP] DNS Server was bound successfully.
+[2022-08-07 10:22:42 UTC] [0.0.0.0:53] [TCP] DNS Server was bound successfully.
+[2022-08-07 10:22:42 UTC] [0.0.0.0:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-07 10:22:42 UTC] [[::]:53] [UDP] DNS Server was bound successfully.
+[2022-08-07 10:22:42 UTC] [[::]:53] [TCP] DNS Server was bound successfully.
+[2022-08-07 10:22:42 UTC] [[::]:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-07 10:22:42 UTC] DHCP Server successfully loaded scope: Default
+[2022-08-07 10:22:42 UTC] DHCP Server successfully loaded scope file: /etc/dns/config/scopes/Default.scope
+[2022-08-07 10:22:42 UTC] [0.0.0.0:5380] HTTP Web Service was started successfully.
+[2022-08-07 10:22:42 UTC] DNS Server (v8.1.4.0) was started successfully.
+[2022-08-07 10:23:02 UTC] [172.24.0.1:46428] [admin] User logged in.
+[2022-08-07 10:23:04 UTC] [172.24.0.1:46426] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-07 10:39:49 UTC] Saved zone file for domain: 102.40.13.in-addr.arpa
+[2022-08-07 10:39:49 UTC] [172.24.0.1:43884] [admin] New record was added to authoritative zone {domain: dev.1stcall.uk; type: A; value: ; ttl: 3600;}
+[2022-08-07 10:39:49 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-07 10:40:20 UTC] [172.24.0.1:44708] [admin] New record was added to authoritative zone {domain: test.dev.1stcall.uk; type: CNAME; value: ; ttl: 3600;}
+[2022-08-07 10:40:20 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-07 10:52:43 UTC] [172.24.0.1:46536] DnsServerCore.DnsWebServiceException: Invalid username or password for user: admin
+   at DnsServerCore.DnsWebService.LoginAsync(HttpListenerRequest request, JsonTextWriter jsonWriter) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 1057
+   at DnsServerCore.DnsWebService.ProcessRequestAsync(HttpListenerRequest request, HttpListenerResponse response) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 827
+[2022-08-07 10:52:52 UTC] [172.24.0.1:46530] [admin] User logged in.
+[2022-08-07 10:52:54 UTC] [172.24.0.1:46534] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-07 10:55:45 UTC] [172.24.0.1:59378] [admin] DNS Client imported record(s) for authoritative zone {server: 1.1.1.1; zone: 1stcall.uk; type: AAAA;}
+[2022-08-07 10:55:45 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-07 19:18:39 UTC] [172.24.0.1:44648] [admin] User logged in.
+[2022-08-07 19:18:41 UTC] [172.24.0.1:44644] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-07 19:19:36 UTC] Saved zone file for domain: 0.0.5.5.0.3.c.1.e.7.c.0.2.0.a.2.ip6.arpa
+[2022-08-07 19:19:36 UTC] [172.24.0.1:52648] [admin] New record was added to authoritative zone {domain: rpi4b-1.1stcall.uk; type: AAAA; value: ; ttl: 3600;}
+[2022-08-07 19:19:36 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-07 19:35:13 UTC] Saved zone file for domain: 148.67.152.in-addr.arpa
+[2022-08-07 19:35:13 UTC] [172.24.0.1:49894] [admin] New record was added to authoritative zone {domain: ns1.1stcall.uk; type: A; value: ; ttl: 3600;}
+[2022-08-07 19:35:13 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-07 19:53:16 UTC] [172.24.0.1:53796] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-07 21:42:35 UTC] [172.24.0.1:60042] [admin] User logged in.
+[2022-08-07 21:42:36 UTC] [172.24.0.1:60040] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-07 21:45:06 UTC] DNS Server config file was saved: /etc/dns/config/dns.config
+[2022-08-07 21:45:06 UTC] [172.24.0.1:44622] [admin] DNS Settings were updated {dnsServerDomain: 1stcall.uk; dnsServerLocalEndPoints: 0.0.0.0:53,[::]:53; webServiceLocalAddresses: 0.0.0.0,[::]; webServiceHttpPort: 5380; webServiceEnableTls: false; webServiceHttpToTlsRedirect: false; webServiceTlsPort: 53443; webServiceUseSelfSignedTlsCertificate: False; webServiceTlsCertificatePath: ; enableDnsOverHttp: True; enableDnsOverTls: False; enableDnsOverHttps: False; dnsTlsCertificatePath: ; defaultRecordTtl: 3600; preferIPv6: False; enableLogging: true; logQueries: False; useLocalTime: false; logFolder: logs; maxLogFileDays: 0; recursion: Allow; randomizeName: true; qnameMinimization: true; serveStale: true; serveStaleTtl: 259200; cachePrefetchEligibility: 2; cachePrefetchTrigger: 9; cachePrefetchSampleIntervalInMinutes: 5; cachePrefetchSampleEligibilityHitsPerHour: 30; proxyType: none; forwarders: 1.1.1.1,8.8.8.8; forwarderProtocol: Udp; enableBlocking: True; allowTxtBlockingReport: True; blockingType: AnyAddress; blockListUrl: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts; blockListUpdateIntervalHours: 24;}
+[2022-08-07 21:45:12 UTC] DNS Server successfully downloaded block list (4.89 MB): https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts
+[2022-08-07 21:45:12 UTC] DNS Server is reading block list from: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts
+[2022-08-07 21:45:13 UTC] DNS Server read block list file (140614 domains) from: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts
+[2022-08-07 21:45:13 UTC] DNS Server block list zone was loaded successfully.
+[2022-08-07 21:45:13 UTC] DNS Server config file was saved: /etc/dns/config/dns.config
+[2022-08-07 21:45:16 UTC] [172.24.0.1:44622] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-07 21:45:40 UTC] [172.24.0.1:41578] [admin] Block list update was triggered.
+[2022-08-07 21:45:45 UTC] DNS Server successfully downloaded block list (4.89 MB): https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts
+[2022-08-07 21:45:45 UTC] DNS Server is reading block list from: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts
+[2022-08-07 21:45:46 UTC] DNS Server read block list file (140614 domains) from: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts
+[2022-08-07 21:45:46 UTC] DNS Server block list zone was loaded successfully.
+[2022-08-07 21:45:46 UTC] DNS Server config file was saved: /etc/dns/config/dns.config
+[2022-08-07 22:05:06 UTC] [172.24.0.1:40020] [admin] New record was added to authoritative zone {domain: ns2.1stcall.uk; type: NS; value: ; ttl: 3600;}
+[2022-08-07 22:05:06 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-07 22:05:37 UTC] [172.24.0.1:43760] [admin] Record was updated for authoritative zone {oldDomain: ns2.1stcall.uk; domain: ns2.1stcall.uk.1stcall.uk; type: NS; oldValue: ; value: ; ttl: 3600; disabled: False;}
+[2022-08-07 22:05:37 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-07 22:06:03 UTC] [172.24.0.1:60174] [admin] Record was updated for authoritative zone {oldDomain: ns2.1stcall.uk.1stcall.uk; domain: ns2.1stcall.uk.1stcall.uk; type: NS; oldValue: ; value: ; ttl: 3600; disabled: False;}
+[2022-08-07 22:06:03 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-07 22:07:23 UTC] [172.24.0.1:33462] [admin] Record was updated for authoritative zone {oldDomain: ns2.1stcall.uk.1stcall.uk; domain: 1stcall.uk; type: NS; oldValue: ; value: ; ttl: 3600; disabled: False;}
+[2022-08-07 22:07:23 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-07 22:07:33 UTC] DNS Server failed to notify name server 'ns2.1stcall.uk' due to failure in resolving its IP address for zone: 1stcall.uk
+[2022-08-07 22:08:07 UTC] Saved zone file for domain: 102.40.13.in-addr.arpa
+[2022-08-07 22:08:07 UTC] [172.24.0.1:38302] [admin] New record was added to authoritative zone {domain: ns2.1stcall.uk; type: A; value: ; ttl: 3600;}
+[2022-08-07 22:08:07 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-07 22:09:07 UTC] DNS Server failed to notify name server 'ns2.1stcall.uk' for zone: 1stcall.uk
+[2022-08-07 22:09:07 UTC] System.Net.Sockets.SocketException (110): Connection timed out
+   at TechnitiumLibrary.Net.SocketExtension.UdpQueryAsync(Socket socket, ArraySegment`1 request, ArraySegment`1 response, IPEndPoint remoteEP, Int32 timeout, Int32 retries, Boolean expBackoffTimeout, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\SocketExtension.cs:line 141
+   at TechnitiumLibrary.Net.Dns.ClientConnection.UdpClientConnection.QueryAsync(DnsDatagram request, Int32 timeout, Int32 retries, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\ClientConnection\UdpClientConnection.cs:line 77
+   at TechnitiumLibrary.Net.Dns.DnsClient.<>c__DisplayClass64_0.<<InternalResolveAsync>g__DoResolveAsync|1>d.MoveNext() in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 3832
+--- End of stack trace from previous location ---
+   at TechnitiumLibrary.Net.Dns.DnsClient.<>c__DisplayClass64_0.<<InternalResolveAsync>g__DoResolveAsync|1>d.MoveNext() in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 3782
+--- End of stack trace from previous location ---
+   at TechnitiumLibrary.Net.Dns.DnsClient.InternalResolveAsync(DnsDatagram request, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 4061
+   at TechnitiumLibrary.Net.Dns.DnsClient.InternalNoDnssecResolveAsync(DnsDatagram request, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 4075
+   at DnsServerCore.Dns.Zones.ApexZone.NotifyNameServerAsync(DnsServer dnsServer, String nameServerHost, IReadOnlyList`1 nameServers) in Z:\Technitium\Projects\DnsServer\DnsServerCore\Dns\Zones\ApexZone.cs:line 312
+[2022-08-07 22:17:38 UTC] [172.24.0.1:56272] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-07 22:17:41 UTC] [172.24.0.1:56292] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-07 22:17:43 UTC] [172.24.0.1:56304] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-07 22:17:46 UTC] [172.24.0.1:33612] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-07 22:17:50 UTC] [172.24.0.1:33648] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-07 22:40:44 UTC] [172.24.0.1:59110] [admin] Record was updated for authoritative zone {oldDomain: test.dev.1stcall.uk; domain: test.dev.1stcall.uk; type: CNAME; oldValue: ; value: ; ttl: 3600; disabled: False;}
+[2022-08-07 22:40:44 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-07 22:41:44 UTC] DNS Server failed to notify name server 'ns2.1stcall.uk' for zone: 1stcall.uk
+[2022-08-07 22:41:44 UTC] System.Net.Sockets.SocketException (110): Connection timed out
+   at TechnitiumLibrary.Net.SocketExtension.UdpQueryAsync(Socket socket, ArraySegment`1 request, ArraySegment`1 response, IPEndPoint remoteEP, Int32 timeout, Int32 retries, Boolean expBackoffTimeout, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\SocketExtension.cs:line 141
+   at TechnitiumLibrary.Net.Dns.ClientConnection.UdpClientConnection.QueryAsync(DnsDatagram request, Int32 timeout, Int32 retries, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\ClientConnection\UdpClientConnection.cs:line 77
+   at TechnitiumLibrary.Net.Dns.DnsClient.<>c__DisplayClass64_0.<<InternalResolveAsync>g__DoResolveAsync|1>d.MoveNext() in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 3832
+--- End of stack trace from previous location ---
+   at TechnitiumLibrary.Net.Dns.DnsClient.<>c__DisplayClass64_0.<<InternalResolveAsync>g__DoResolveAsync|1>d.MoveNext() in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 3782
+--- End of stack trace from previous location ---
+   at TechnitiumLibrary.Net.Dns.DnsClient.InternalResolveAsync(DnsDatagram request, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 4061
+   at TechnitiumLibrary.Net.Dns.DnsClient.InternalNoDnssecResolveAsync(DnsDatagram request, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 4075
+   at DnsServerCore.Dns.Zones.ApexZone.NotifyNameServerAsync(DnsServer dnsServer, String nameServerHost, IReadOnlyList`1 nameServers) in Z:\Technitium\Projects\DnsServer\DnsServerCore\Dns\Zones\ApexZone.cs:line 312
+[2022-08-07 23:24:13 UTC] [172.24.0.1:55486] [admin] User logged in.
+[2022-08-07 23:24:15 UTC] [172.24.0.1:55490] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-08 00:09:43 UTC] Logging stopped.

@@ -1,0 +1,26 @@
+[2022-08-09 00:00:12 UTC] Logging started.
+[2022-08-09 00:00:12 UTC] [172.25.0.1:43100] [admin] User logged in.
+[2022-08-09 00:00:14 UTC] [172.25.0.1:43108] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-09 01:54:59 UTC] [172.25.0.1:51584] [admin] User logged in.
+[2022-08-09 01:55:00 UTC] [172.25.0.1:51584] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-09 01:55:59 UTC] Saved zone file for domain: 0.0.5.5.0.3.c.1.e.7.c.0.2.0.a.2.ip6.arpa
+[2022-08-09 01:55:59 UTC] Saved zone file for domain: 0.0.5.5.0.3.c.1.e.7.c.0.2.0.a.2.ip6.arpa
+[2022-08-09 01:55:59 UTC] [172.25.0.1:37824] [admin] Record was updated for authoritative zone {oldDomain: rpi4b-1.1stcall.uk; domain: rpi4b-1.1stcall.uk; type: AAAA; oldValue: ; value: ; ttl: 3600; disabled: False;}
+[2022-08-09 01:55:59 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-09 01:56:09 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
+[2022-08-09 01:56:14 UTC] [3.11.65.170:23246] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
+[2022-08-09 02:24:19 UTC] [172.25.0.1:46152] [admin] Record was deleted from authoritative zone {domain: 1stcall.uk; type: A;}
+[2022-08-09 02:24:19 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-09 02:24:29 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
+[2022-08-09 02:24:34 UTC] [3.11.65.170:23258] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
+[2022-08-09 02:24:39 UTC] Saved zone file for domain: 0.0.c.5.2.0.0.c.0.2.0.c.3.0.6.2.ip6.arpa
+[2022-08-09 02:24:39 UTC] Saved zone file for domain: 0.0.5.5.0.3.c.1.e.7.c.0.2.0.a.2.ip6.arpa
+[2022-08-09 02:24:39 UTC] [172.25.0.1:50732] [admin] Record was updated for authoritative zone {oldDomain: 1stcall.uk; domain: 1stcall.uk; type: AAAA; oldValue: ; value: ; ttl: 3600; disabled: False;}
+[2022-08-09 02:24:39 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-09 02:24:49 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
+[2022-08-09 02:24:54 UTC] [3.11.65.170:23260] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
+[2022-08-09 02:26:41 UTC] Saved zone file for domain: 0.0.5.5.0.3.c.1.e.7.c.0.2.0.a.2.ip6.arpa
+[2022-08-09 02:26:41 UTC] [172.25.0.1:42960] [admin] New record was added to authoritative zone {domain: db.1stcall.uk; type: AAAA; value: ; ttl: 3600;}
+[2022-08-09 02:26:41 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-09 02:26:51 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
+[2022-08-09 02:26:56 UTC] [3.11.65.170:23262] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
