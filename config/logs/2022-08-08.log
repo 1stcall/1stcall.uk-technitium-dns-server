@@ -1,253 +1,455 @@
-[2022-08-08 00:09:43 UTC] Logging started.
-[2022-08-08 00:09:43 UTC] [13.40.102.216:27670] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 08:31:21 UTC] [172.24.0.1:52864] [admin] User logged in.
-[2022-08-08 08:31:23 UTC] [172.24.0.1:52872] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 08:44:24 UTC] Saved zone file for domain: 102.40.13.in-addr.arpa
-[2022-08-08 08:44:24 UTC] [172.24.0.1:56948] [admin] New record was added to authoritative zone {domain: testapi.dev.1stcall.uk.1stcall.uk; type: A; value: ; ttl: 3600;}
-[2022-08-08 08:44:24 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 08:44:34 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 08:44:39 UTC] [13.40.102.216:11146] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 08:44:46 UTC] Saved zone file for domain: 102.40.13.in-addr.arpa
-[2022-08-08 08:44:46 UTC] [172.24.0.1:41132] [admin] New record was added to authoritative zone {domain: test.1stcall.uk.1stcall.uk; type: A; value: ; ttl: 3600;}
-[2022-08-08 08:44:46 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 08:44:56 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 08:45:01 UTC] [13.40.102.216:15052] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 08:45:31 UTC] [172.24.0.1:54742] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 08:47:49 UTC] [172.24.0.1:34012] TechnitiumLibrary.Net.Dns.DnsClientException: Invalid domain name [testapi.dev..1stcall.uk]: label length cannot be 0 byte.
-   at TechnitiumLibrary.Net.Dns.DnsClient.IsDomainNameValid(String domain, Boolean throwException) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 2133
-   at TechnitiumLibrary.Net.Dns.ResourceRecords.DnsResourceRecord..ctor(String name, DnsResourceRecordType type, DnsClass class, UInt32 ttl, DnsResourceRecordData data) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\ResourceRecords\DnsResourceRecord.cs:line 172
-   at DnsServerCore.WebServiceZonesApi.UpdateRecord(HttpListenerRequest request, JsonTextWriter jsonWriter) in Z:\Technitium\Projects\DnsServer\DnsServerCore\WebServiceZonesApi.cs:line 2719
+[2022-08-08 00:00:53 UTC] Logging started.
+[2022-08-08 00:00:53 UTC] DNS Server config file was loaded: /etc/dns/config/dns.config
+[2022-08-08 00:00:53 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/ntp.org.zone
+[2022-08-08 00:00:53 UTC] DNS Server is loading allowed zone file: /etc/dns/config/allowed.config
+[2022-08-08 00:00:53 UTC] DNS Server is loading blocked zone file: /etc/dns/config/blocked.config
+[2022-08-08 00:00:53 UTC] [0.0.0.0:53] [UDP] DNS Server was bound successfully.
+[2022-08-08 00:00:53 UTC] [0.0.0.0:53] [TCP] DNS Server was bound successfully.
+[2022-08-08 00:00:53 UTC] [0.0.0.0:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-08 00:00:53 UTC] [[::]:53] [UDP] DNS Server was bound successfully.
+[2022-08-08 00:00:53 UTC] [[::]:53] [TCP] DNS Server was bound successfully.
+[2022-08-08 00:00:53 UTC] [[::]:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-08 00:00:53 UTC] DHCP Server successfully loaded scope: Default
+[2022-08-08 00:00:53 UTC] DHCP Server successfully loaded scope file: /etc/dns/config/scopes/Default.scope
+[2022-08-08 00:00:53 UTC] [0.0.0.0:5380] HTTP Web Service was started successfully.
+[2022-08-08 00:00:53 UTC] DNS Server (v8.1.4.0) was started successfully.
+[2022-08-08 00:00:57 UTC] [94.3.33.239:47098] DnsServerCore.DnsWebServiceException: Invalid username or password for user: admin
+   at DnsServerCore.DnsWebService.LoginAsync(HttpListenerRequest request, JsonTextWriter jsonWriter) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 1057
+   at DnsServerCore.DnsWebService.ProcessRequestAsync(HttpListenerRequest request, HttpListenerResponse response) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 378
+[2022-08-08 00:01:10 UTC] [94.3.33.239:39666] DnsServerCore.DnsWebServiceException: Invalid username or password for user: admin
+   at DnsServerCore.DnsWebService.LoginAsync(HttpListenerRequest request, JsonTextWriter jsonWriter) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 1057
+   at DnsServerCore.DnsWebService.ProcessRequestAsync(HttpListenerRequest request, HttpListenerResponse response) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 378
+[2022-08-08 00:01:18 UTC] [94.3.33.239:39648] [admin] User logged in.
+[2022-08-08 00:01:20 UTC] [94.3.33.239:39674] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-08 00:06:36 UTC] [94.3.33.239:43120] [admin] Authoritative secondary zone was created: 1stcall.uk
+[2022-08-08 00:06:36 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 00:06:36 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 00:06:36 UTC] DNS Server received a zone transfer response (RCODE=Refused) for '1stcall.uk' secondary zone from: ns2.mythic-beasts.com (93.93.128.67)
+[2022-08-08 00:09:13 UTC] [94.3.33.239:60428] [admin] Secondary zone was deleted: 1stcall.uk
+[2022-08-08 00:09:13 UTC] Deleted zone file for domain: 1stcall.uk
+[2022-08-08 00:09:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 00:09:43 UTC] [94.3.33.239:33702] [admin] Authoritative secondary zone was created: 1stcall.uk
+[2022-08-08 00:09:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 00:09:43 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 00:09:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 00:10:28 UTC] [5.181.234.132:58012] DnsServerCore.DnsWebServiceException: Invalid username or password for user: admin
+   at DnsServerCore.DnsWebService.LoginAsync(HttpListenerRequest request, JsonTextWriter jsonWriter) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 1057
    at DnsServerCore.DnsWebService.ProcessRequestAsync(HttpListenerRequest request, HttpListenerResponse response) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 827
-[2022-08-08 08:47:58 UTC] [172.24.0.1:34012] [admin] Record was updated for authoritative zone {oldDomain: testapi.dev.1stcall.uk.1stcall.uk; domain: testapi.dev.1stcall.uk; type: A; oldValue: ; value: ; ttl: 3600; disabled: False;}
-[2022-08-08 08:47:58 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 08:48:08 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 08:48:13 UTC] [13.40.102.216:32388] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 08:48:28 UTC] [172.24.0.1:53278] [admin] Record was updated for authoritative zone {oldDomain: test.1stcall.uk.1stcall.uk; domain: test.1stcall.uk; type: A; oldValue: ; value: ; ttl: 3600; disabled: False;}
-[2022-08-08 08:48:28 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 08:48:38 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 08:48:43 UTC] [13.40.102.216:1302] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 09:00:37 UTC] [172.24.0.1:52760] [admin] Record was deleted from authoritative zone {domain: test.dev.1stcall.uk; type: CNAME;}
-[2022-08-08 09:00:37 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 09:01:00 UTC] Saved zone file for domain: 102.40.13.in-addr.arpa
-[2022-08-08 09:01:00 UTC] [172.24.0.1:38454] [admin] New record was added to authoritative zone {domain: test.dev.1stcall.uk; type: A; value: ; ttl: 3600;}
-[2022-08-08 09:01:00 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 09:01:37 UTC] DNS Server failed to notify name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 09:01:37 UTC] System.Net.Sockets.SocketException (110): Connection timed out
-   at TechnitiumLibrary.Net.SocketExtension.UdpQueryAsync(Socket socket, ArraySegment`1 request, ArraySegment`1 response, IPEndPoint remoteEP, Int32 timeout, Int32 retries, Boolean expBackoffTimeout, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\SocketExtension.cs:line 141
-   at TechnitiumLibrary.Net.Dns.ClientConnection.UdpClientConnection.QueryAsync(DnsDatagram request, Int32 timeout, Int32 retries, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\ClientConnection\UdpClientConnection.cs:line 77
-   at TechnitiumLibrary.Net.Dns.DnsClient.<>c__DisplayClass64_0.<<InternalResolveAsync>g__DoResolveAsync|1>d.MoveNext() in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 3832
---- End of stack trace from previous location ---
-   at TechnitiumLibrary.Net.Dns.DnsClient.<>c__DisplayClass64_0.<<InternalResolveAsync>g__DoResolveAsync|1>d.MoveNext() in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 3782
---- End of stack trace from previous location ---
-   at TechnitiumLibrary.Net.Dns.DnsClient.InternalResolveAsync(DnsDatagram request, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 4061
-   at TechnitiumLibrary.Net.Dns.DnsClient.InternalNoDnssecResolveAsync(DnsDatagram request, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 4075
-   at DnsServerCore.Dns.Zones.ApexZone.NotifyNameServerAsync(DnsServer dnsServer, String nameServerHost, IReadOnlyList`1 nameServers) in Z:\Technitium\Projects\DnsServer\DnsServerCore\Dns\Zones\ApexZone.cs:line 312
-[2022-08-08 09:03:17 UTC] Saved zone file for domain: 0.0.4.c.0.f.8.0.c.1.0.d.5.0.a.2.ip6.arpa
-[2022-08-08 09:03:17 UTC] [172.24.0.1:37048] [admin] New record was added to authoritative zone {domain: test.dev.1stcall.uk; type: AAAA; value: ; ttl: 3600;}
-[2022-08-08 09:03:17 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 09:03:35 UTC] [172.24.0.1:43718] [admin] New record was added to authoritative zone {domain: testapi.dev.1stcall.uk; type: AAAA; value: ; ttl: 3600;}
-[2022-08-08 09:03:35 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 09:04:17 UTC] DNS Server failed to notify name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 09:04:17 UTC] System.Net.Sockets.SocketException (110): Connection timed out
-   at TechnitiumLibrary.Net.SocketExtension.UdpQueryAsync(Socket socket, ArraySegment`1 request, ArraySegment`1 response, IPEndPoint remoteEP, Int32 timeout, Int32 retries, Boolean expBackoffTimeout, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\SocketExtension.cs:line 141
-   at TechnitiumLibrary.Net.Dns.ClientConnection.UdpClientConnection.QueryAsync(DnsDatagram request, Int32 timeout, Int32 retries, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\ClientConnection\UdpClientConnection.cs:line 77
-   at TechnitiumLibrary.Net.Dns.DnsClient.<>c__DisplayClass64_0.<<InternalResolveAsync>g__DoResolveAsync|1>d.MoveNext() in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 3832
---- End of stack trace from previous location ---
-   at TechnitiumLibrary.Net.Dns.DnsClient.<>c__DisplayClass64_0.<<InternalResolveAsync>g__DoResolveAsync|1>d.MoveNext() in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 3782
---- End of stack trace from previous location ---
-   at TechnitiumLibrary.Net.Dns.DnsClient.InternalResolveAsync(DnsDatagram request, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 4061
-   at TechnitiumLibrary.Net.Dns.DnsClient.InternalNoDnssecResolveAsync(DnsDatagram request, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 4075
-   at DnsServerCore.Dns.Zones.ApexZone.NotifyNameServerAsync(DnsServer dnsServer, String nameServerHost, IReadOnlyList`1 nameServers) in Z:\Technitium\Projects\DnsServer\DnsServerCore\Dns\Zones\ApexZone.cs:line 312
-[2022-08-08 09:13:29 UTC] [13.40.102.216:61604] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 09:14:20 UTC] [172.24.0.1:43804] [admin] Primary zone options were updated successfully: 1stcall.uk
-[2022-08-08 09:14:20 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 09:15:12 UTC] [172.24.0.1:47622] [admin] Primary zone was signed successfully: 1stcall.uk
-[2022-08-08 09:15:12 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 09:15:22 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 09:15:27 UTC] [13.40.102.216:48776] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 09:20:20 UTC] DNS Server failed to resolve the request with QNAME: testapi.dev; QTYPE: A; QCLASS: IN; Forwarders: 1.1.1.1, 8.8.8.8;
+[2022-08-08 00:24:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 00:24:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 00:24:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 00:39:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 00:39:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 00:39:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 00:54:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 00:54:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 00:54:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 01:09:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 01:09:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 01:09:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 01:24:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 01:24:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 01:24:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 01:39:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 01:39:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 01:39:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 01:54:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 01:54:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 01:54:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 02:09:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 02:09:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 02:09:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 02:24:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 02:24:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 02:24:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 02:39:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 02:39:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 02:39:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 02:54:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 02:54:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 02:54:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 03:09:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 03:09:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 03:09:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 03:24:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 03:24:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 03:24:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 03:39:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 03:39:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 03:39:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 03:54:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 03:54:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 03:54:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 04:09:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 04:09:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 04:09:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 04:24:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 04:24:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 04:24:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 04:39:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 04:39:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 04:39:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 04:54:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 04:54:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 04:54:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 05:09:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 05:09:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 05:09:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 05:24:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 05:24:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 05:24:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 05:39:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 05:39:43 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 05:39:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 05:54:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 05:54:44 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 05:54:44 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 06:09:44 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 06:09:44 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 06:09:44 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 06:24:44 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 06:24:44 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 06:24:44 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 06:39:44 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 06:39:44 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 06:39:44 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 06:54:44 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 06:54:44 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 06:54:44 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 07:09:44 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 07:09:44 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 07:09:44 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 07:24:44 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 07:24:44 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 07:24:44 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 07:39:44 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 07:39:44 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 07:39:44 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 07:54:44 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 07:54:44 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 07:54:44 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 08:09:44 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 08:09:44 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 08:09:44 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 08:24:44 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 08:24:44 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 08:24:44 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 08:39:44 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 08:39:44 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 08:39:44 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 08:44:34 UTC] [152.67.148.178:50859] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 08:44:39 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 08:44:39 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 08:44:39 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 08:44:56 UTC] [152.67.148.178:38507] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 08:45:01 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 08:45:01 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 08:45:01 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 08:46:33 UTC] [94.3.33.239:52737] DnsServerCore.DnsWebServiceException: Invalid username or password for user: admin
+   at DnsServerCore.DnsWebService.LoginAsync(HttpListenerRequest request, JsonTextWriter jsonWriter) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 1057
+   at DnsServerCore.DnsWebService.ProcessRequestAsync(HttpListenerRequest request, HttpListenerResponse response) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 827
+[2022-08-08 08:46:40 UTC] [94.3.33.239:52736] [admin] User logged in.
+[2022-08-08 08:46:42 UTC] [94.3.33.239:52740] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-08 08:48:08 UTC] [152.67.148.178:10949] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 08:48:13 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 08:48:13 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 08:48:13 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 08:48:38 UTC] [152.67.148.178:22184] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 08:48:43 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 08:48:43 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 08:48:43 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 08:56:10 UTC] DHCP Server successfully unloaded scope: Default
+[2022-08-08 08:56:10 UTC] Logging stopped.
+[2022-08-08 09:13:23 UTC] Logging started.
+[2022-08-08 09:13:24 UTC] DNS Server config file was loaded: /etc/dns/config/dns.config
+[2022-08-08 09:13:24 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/ntp.org.zone
+[2022-08-08 09:13:24 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/1stcall.uk.zone
+[2022-08-08 09:13:24 UTC] DNS Server is loading allowed zone file: /etc/dns/config/allowed.config
+[2022-08-08 09:13:24 UTC] DNS Server is loading blocked zone file: /etc/dns/config/blocked.config
+[2022-08-08 09:13:24 UTC] [0.0.0.0:53] [UDP] DNS Server was bound successfully.
+[2022-08-08 09:13:24 UTC] [0.0.0.0:53] [TCP] DNS Server was bound successfully.
+[2022-08-08 09:13:24 UTC] [0.0.0.0:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-08 09:13:24 UTC] [[::]:53] [UDP] DNS Server was bound successfully.
+[2022-08-08 09:13:24 UTC] [[::]:53] [TCP] DNS Server was bound successfully.
+[2022-08-08 09:13:24 UTC] [[::]:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-08 09:13:24 UTC] DHCP Server successfully loaded scope: Default
+[2022-08-08 09:13:24 UTC] DHCP Server successfully loaded scope file: /etc/dns/config/scopes/Default.scope
+[2022-08-08 09:13:24 UTC] [0.0.0.0:5380] HTTP Web Service was started successfully.
+[2022-08-08 09:13:24 UTC] DNS Server (v8.1.4.0) was started successfully.
+[2022-08-08 09:13:29 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 09:13:29 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 09:13:29 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 09:15:22 UTC] [152.67.148.178:46598] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 09:15:27 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 09:15:27 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 09:15:27 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 09:18:28 UTC] DHCP Server successfully unloaded scope: Default
+[2022-08-08 09:18:28 UTC] DNS Server (v8.1.4.0) was stopped successfully.
+[2022-08-08 09:18:28 UTC] Logging stopped.
+[2022-08-08 11:02:09 UTC] Logging started.
+[2022-08-08 11:02:09 UTC] DNS Server config file was loaded: /etc/dns/config/dns.config
+[2022-08-08 11:02:09 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/ntp.org.zone
+[2022-08-08 11:02:09 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/1stcall.uk.zone
+[2022-08-08 11:02:09 UTC] DNS Server is loading allowed zone file: /etc/dns/config/allowed.config
+[2022-08-08 11:02:09 UTC] DNS Server is loading blocked zone file: /etc/dns/config/blocked.config
+[2022-08-08 11:02:09 UTC] [0.0.0.0:53] [UDP] DNS Server was bound successfully.
+[2022-08-08 11:02:09 UTC] [0.0.0.0:53] [TCP] DNS Server was bound successfully.
+[2022-08-08 11:02:09 UTC] [0.0.0.0:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-08 11:02:09 UTC] [[::]:53] [UDP] DNS Server was bound successfully.
+[2022-08-08 11:02:09 UTC] [[::]:53] [TCP] DNS Server was bound successfully.
+[2022-08-08 11:02:09 UTC] [[::]:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-08 11:02:09 UTC] DHCP Server successfully loaded scope: Default
+[2022-08-08 11:02:09 UTC] DHCP Server successfully loaded scope file: /etc/dns/config/scopes/Default.scope
+[2022-08-08 11:02:09 UTC] [0.0.0.0:5380] HTTP Web Service was started successfully.
+[2022-08-08 11:02:09 UTC] DNS Server (v8.1.4.0) was started successfully.
+[2022-08-08 11:02:14 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 11:02:14 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 11:02:14 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 11:17:14 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 11:17:14 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 11:17:14 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 11:25:24 UTC] DHCP Server successfully unloaded scope: Default
+[2022-08-08 11:25:24 UTC] DNS Server (v8.1.4.0) was stopped successfully.
+[2022-08-08 11:25:24 UTC] Logging stopped.
+[2022-08-08 11:25:25 UTC] Logging started.
+[2022-08-08 11:25:25 UTC] DNS Server config file was loaded: /etc/dns/config/dns.config
+[2022-08-08 11:25:25 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/ntp.org.zone
+[2022-08-08 11:25:25 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/1stcall.uk.zone
+[2022-08-08 11:25:25 UTC] DNS Server is loading allowed zone file: /etc/dns/config/allowed.config
+[2022-08-08 11:25:25 UTC] DNS Server is loading blocked zone file: /etc/dns/config/blocked.config
+[2022-08-08 11:25:25 UTC] [0.0.0.0:53] [UDP] DNS Server was bound successfully.
+[2022-08-08 11:25:25 UTC] [0.0.0.0:53] [TCP] DNS Server was bound successfully.
+[2022-08-08 11:25:25 UTC] [0.0.0.0:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-08 11:25:25 UTC] [[::]:53] [UDP] DNS Server was bound successfully.
+[2022-08-08 11:25:25 UTC] [[::]:53] [TCP] DNS Server was bound successfully.
+[2022-08-08 11:25:25 UTC] [[::]:8053] [HTTP] DNS Server was bound successfully.
+[2022-08-08 11:25:25 UTC] DHCP Server successfully loaded scope: Default
+[2022-08-08 11:25:25 UTC] DHCP Server successfully loaded scope file: /etc/dns/config/scopes/Default.scope
+[2022-08-08 11:25:25 UTC] [0.0.0.0:5380] HTTP Web Service was started successfully.
+[2022-08-08 11:25:25 UTC] DNS Server (v8.1.4.0) was started successfully.
+[2022-08-08 11:25:30 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 11:25:30 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 11:25:30 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 11:25:55 UTC] [94.3.33.239:55029] DnsServerCore.DnsWebServiceException: Invalid username or password for user: admin
+   at DnsServerCore.DnsWebService.LoginAsync(HttpListenerRequest request, JsonTextWriter jsonWriter) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 1057
+   at DnsServerCore.DnsWebService.ProcessRequestAsync(HttpListenerRequest request, HttpListenerResponse response) in Z:\Technitium\Projects\DnsServer\DnsServerCore\DnsWebService.cs:line 378
+[2022-08-08 11:26:00 UTC] [94.3.33.239:55027] [admin] User logged in.
+[2022-08-08 11:26:02 UTC] [94.3.33.239:55027] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-08 11:40:30 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 11:40:30 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 11:40:30 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 11:55:30 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 11:55:30 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 11:55:30 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 12:10:30 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 12:10:30 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 12:10:30 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 12:25:30 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 12:25:30 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 12:25:30 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 12:40:30 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 12:40:30 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 12:40:30 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 12:53:18 UTC] [152.67.148.178:25338] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 12:53:23 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 12:53:23 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 12:53:23 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 12:53:48 UTC] [152.67.148.178:62259] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 12:53:53 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 12:53:53 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 12:53:53 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 12:54:07 UTC] [152.67.148.178:34685] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 12:54:12 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 12:54:12 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 12:54:12 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 12:55:06 UTC] [152.67.148.178:42349] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 12:55:11 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 12:55:11 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 12:55:11 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 13:06:11 UTC] [94.3.33.239:51776] [admin] User logged in.
+[2022-08-08 13:06:13 UTC] [94.3.33.239:51776] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-08 13:06:51 UTC] [94.3.33.239:51782] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-08 13:10:11 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 13:10:11 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 13:10:11 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 13:15:17 UTC] [152.67.148.178:20486] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 13:15:22 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 13:15:22 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 13:15:22 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 13:15:39 UTC] [152.67.148.178:18077] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 13:15:44 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 13:15:44 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 13:15:44 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 13:16:03 UTC] [152.67.148.178:33510] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 13:16:08 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 13:16:08 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 13:16:08 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 13:31:08 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 13:31:08 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 13:31:08 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 13:46:08 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 13:46:08 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 13:46:08 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 14:01:08 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 14:01:08 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 14:01:08 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 14:16:08 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 14:16:08 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 14:16:08 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 14:31:08 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 14:31:08 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 14:31:08 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 14:46:08 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 14:46:08 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 14:46:08 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 15:01:08 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 15:01:08 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 15:01:08 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 15:16:08 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 15:16:08 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 15:16:08 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 15:31:08 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 15:31:08 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 15:31:08 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 15:46:08 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 15:46:08 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 15:46:08 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 16:01:08 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 16:01:08 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 16:01:08 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 16:14:02 UTC] [152.67.148.178:31600] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 16:14:07 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 16:14:07 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 16:14:07 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 16:25:34 UTC] [152.67.148.178:47041] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 16:25:39 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 16:25:39 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 16:25:39 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 16:40:39 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 16:40:39 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 16:40:39 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 16:48:15 UTC] DNS Server failed to resolve the request with QNAME: 3-8-21-85.1659976741.2400.research.openresolve.rs; QTYPE: TXT; QCLASS: IN; Forwarders: 1.1.1.1, 8.8.8.8;
 DnsServerCore.Dns.DnsServerException: DNS Server received a response with RCODE=ServerFailure from: 1.1.1.1
    at DnsServerCore.Dns.DnsServer.RecursiveResolveAsync(DnsQuestionRecord question, IReadOnlyList`1 conditionalForwarders, Boolean dnssecValidation, Boolean cachePrefetchOperation, Boolean cacheRefreshOperation, TaskCompletionSource`1 taskCompletionSource) in Z:\Technitium\Projects\DnsServer\DnsServerCore\Dns\DnsServer.cs:line 2273
-[2022-08-08 09:42:24 UTC] [172.24.0.1:58148] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 10:37:37 UTC] Saved zone file for domain: 102.40.13.in-addr.arpa
-[2022-08-08 10:37:37 UTC] Saved zone file for domain: 21.8.3.in-addr.arpa
-[2022-08-08 10:37:37 UTC] [172.24.0.1:52750] [admin] Record was updated for authoritative zone {oldDomain: ns2.1stcall.uk; domain: ns2.1stcall.uk; type: A; oldValue: ; value: ; ttl: 3600; disabled: False;}
-[2022-08-08 10:37:37 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 10:38:37 UTC] DNS Server failed to notify name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 10:38:37 UTC] System.Net.Sockets.SocketException (110): Connection timed out
-   at TechnitiumLibrary.Net.SocketExtension.UdpQueryAsync(Socket socket, ArraySegment`1 request, ArraySegment`1 response, IPEndPoint remoteEP, Int32 timeout, Int32 retries, Boolean expBackoffTimeout, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\SocketExtension.cs:line 141
-   at TechnitiumLibrary.Net.Dns.ClientConnection.UdpClientConnection.QueryAsync(DnsDatagram request, Int32 timeout, Int32 retries, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\ClientConnection\UdpClientConnection.cs:line 77
-   at TechnitiumLibrary.Net.Dns.DnsClient.<>c__DisplayClass64_0.<<InternalResolveAsync>g__DoResolveAsync|1>d.MoveNext() in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 3832
---- End of stack trace from previous location ---
-   at TechnitiumLibrary.Net.Dns.DnsClient.<>c__DisplayClass64_0.<<InternalResolveAsync>g__DoResolveAsync|1>d.MoveNext() in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 3782
---- End of stack trace from previous location ---
-   at TechnitiumLibrary.Net.Dns.DnsClient.InternalResolveAsync(DnsDatagram request, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 4061
-   at TechnitiumLibrary.Net.Dns.DnsClient.InternalNoDnssecResolveAsync(DnsDatagram request, CancellationToken cancellationToken) in Z:\Technitium\Projects\TechnitiumLibrary\TechnitiumLibrary.Net\Dns\DnsClient.cs:line 4075
-   at DnsServerCore.Dns.Zones.ApexZone.NotifyNameServerAsync(DnsServer dnsServer, String nameServerHost, IReadOnlyList`1 nameServers) in Z:\Technitium\Projects\DnsServer\DnsServerCore\Dns\Zones\ApexZone.cs:line 312
-[2022-08-08 10:45:42 UTC] The KSK DNSKEYs (64283) from the primary zone are ready for changing the DS records at the parent zone: 1stcall.uk
-[2022-08-08 10:45:42 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 11:02:14 UTC] [3.8.21.85:23124] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 12:52:36 UTC] [172.24.0.1:60032] [admin] User logged in.
-[2022-08-08 12:52:38 UTC] [172.24.0.1:60032] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 12:53:08 UTC] [172.24.0.1:34714] [admin] Record was updated for authoritative zone {oldDomain: dev.1stcall.uk; domain: dev.1stcall.uk; type: A; oldValue: ; value: ; ttl: 3600; disabled: False;}
-[2022-08-08 12:53:08 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 12:53:18 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 12:53:23 UTC] [3.8.21.85:23190] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 12:53:38 UTC] Saved zone file for domain: 102.40.13.in-addr.arpa
-[2022-08-08 12:53:38 UTC] Saved zone file for domain: 121.133.18.in-addr.arpa
-[2022-08-08 12:53:38 UTC] [172.24.0.1:56104] [admin] Record was updated for authoritative zone {oldDomain: test.dev.1stcall.uk; domain: test.dev.1stcall.uk; type: A; oldValue: ; value: ; ttl: 3600; disabled: False;}
-[2022-08-08 12:53:38 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 12:53:48 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 12:53:53 UTC] [3.8.21.85:23192] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 12:53:57 UTC] Saved zone file for domain: 102.40.13.in-addr.arpa
-[2022-08-08 12:53:57 UTC] Saved zone file for domain: 121.133.18.in-addr.arpa
-[2022-08-08 12:53:57 UTC] [172.24.0.1:35202] [admin] Record was updated for authoritative zone {oldDomain: testapi.dev.1stcall.uk; domain: testapi.dev.1stcall.uk; type: A; oldValue: ; value: ; ttl: 3600; disabled: False;}
-[2022-08-08 12:53:57 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 12:54:07 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 12:54:12 UTC] [3.8.21.85:23194] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 12:54:56 UTC] [172.24.0.1:32830] [admin] Record was deleted from authoritative zone {domain: test.1stcall.uk; type: A;}
-[2022-08-08 12:54:56 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 12:55:06 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 12:55:11 UTC] [3.8.21.85:23196] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 13:05:49 UTC] [172.24.0.1:54780] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 13:06:58 UTC] [172.24.0.1:59710] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 13:15:07 UTC] Saved zone file for domain: 121.133.18.in-addr.arpa
-[2022-08-08 13:15:07 UTC] Saved zone file for domain: 58.176.35.in-addr.arpa
-[2022-08-08 13:15:07 UTC] [172.24.0.1:57884] [admin] Record was updated for authoritative zone {oldDomain: dev.1stcall.uk; domain: dev.1stcall.uk; type: A; oldValue: ; value: ; ttl: 3600; disabled: False;}
-[2022-08-08 13:15:07 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 13:15:17 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 13:15:22 UTC] [3.8.21.85:23210] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 13:15:29 UTC] Saved zone file for domain: 121.133.18.in-addr.arpa
-[2022-08-08 13:15:29 UTC] Saved zone file for domain: 58.176.35.in-addr.arpa
-[2022-08-08 13:15:29 UTC] [172.24.0.1:37554] [admin] Record was updated for authoritative zone {oldDomain: test.dev.1stcall.uk; domain: test.dev.1stcall.uk; type: A; oldValue: ; value: ; ttl: 3600; disabled: False;}
-[2022-08-08 13:15:29 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 13:15:39 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 13:15:44 UTC] [3.8.21.85:23212] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 13:15:53 UTC] Saved zone file for domain: 121.133.18.in-addr.arpa
-[2022-08-08 13:15:53 UTC] Saved zone file for domain: 58.176.35.in-addr.arpa
-[2022-08-08 13:15:53 UTC] [172.24.0.1:39280] [admin] Record was updated for authoritative zone {oldDomain: testapi.dev.1stcall.uk; domain: testapi.dev.1stcall.uk; type: A; oldValue: ; value: ; ttl: 3600; disabled: False;}
-[2022-08-08 13:15:53 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 13:16:03 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 13:16:08 UTC] [3.8.21.85:23214] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 14:27:25 UTC] [172.24.0.1:34222] [admin] User logged in.
-[2022-08-08 14:27:26 UTC] [172.24.0.1:34232] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 16:12:02 UTC] [172.24.0.1:34442] [admin] User logged in.
-[2022-08-08 16:12:03 UTC] [172.24.0.1:34452] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 16:13:52 UTC] Saved zone file for domain: 58.176.35.in-addr.arpa
-[2022-08-08 16:13:52 UTC] [172.24.0.1:46966] [admin] New record was added to authoritative zone {domain: db.dev.1stcall.uk.1stcall.uk; type: A; value: ; ttl: 3600;}
-[2022-08-08 16:13:52 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 16:14:02 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 16:14:07 UTC] [3.8.21.85:23216] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 16:25:24 UTC] [172.24.0.1:56312] [admin] Record was updated for authoritative zone {oldDomain: db.dev.1stcall.uk.1stcall.uk; domain: db.dev.1stcall.uk; type: A; oldValue: ; value: ; ttl: 3600; disabled: False;}
-[2022-08-08 16:25:24 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 16:25:34 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 16:25:39 UTC] [3.8.21.85:23218] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 16:44:50 UTC] DNS Server failed to resolve the request with QNAME: 152-67-148-178.1659976741.2400.research.openresolve.rs; QTYPE: TXT; QCLASS: IN; Forwarders: 1.1.1.1, 8.8.8.8;
+[2022-08-08 16:55:39 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 16:55:39 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 16:55:39 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 16:57:41 UTC] DNS Server failed to resolve the request with QNAME: 3-8-21-85.1659977300.2400.research.openresolve.rs; QTYPE: TXT; QCLASS: IN; Forwarders: 1.1.1.1, 8.8.8.8;
 DnsServerCore.Dns.DnsServerException: DNS Server received a response with RCODE=ServerFailure from: 1.1.1.1
    at DnsServerCore.Dns.DnsServer.RecursiveResolveAsync(DnsQuestionRecord question, IReadOnlyList`1 conditionalForwarders, Boolean dnssecValidation, Boolean cachePrefetchOperation, Boolean cacheRefreshOperation, TaskCompletionSource`1 taskCompletionSource) in Z:\Technitium\Projects\DnsServer\DnsServerCore\Dns\DnsServer.cs:line 2273
-[2022-08-08 16:54:12 UTC] DNS Server failed to resolve the request with QNAME: 152-67-148-178.1659977300.2400.research.openresolve.rs; QTYPE: TXT; QCLASS: IN; Forwarders: 1.1.1.1, 8.8.8.8;
+[2022-08-08 17:07:02 UTC] DNS Server failed to resolve the request with QNAME: 3-8-21-85.1659977867.tr.research.openresolve.rs; QTYPE: TXT; QCLASS: IN; Forwarders: 1.1.1.1, 8.8.8.8;
 DnsServerCore.Dns.DnsServerException: DNS Server received a response with RCODE=ServerFailure from: 1.1.1.1
    at DnsServerCore.Dns.DnsServer.RecursiveResolveAsync(DnsQuestionRecord question, IReadOnlyList`1 conditionalForwarders, Boolean dnssecValidation, Boolean cachePrefetchOperation, Boolean cacheRefreshOperation, TaskCompletionSource`1 taskCompletionSource) in Z:\Technitium\Projects\DnsServer\DnsServerCore\Dns\DnsServer.cs:line 2273
-[2022-08-08 17:03:35 UTC] DNS Server failed to resolve the request with QNAME: 152-67-148-178.1659977867.tr.research.openresolve.rs; QTYPE: TXT; QCLASS: IN; Forwarders: 1.1.1.1, 8.8.8.8;
-DnsServerCore.Dns.DnsServerException: DNS Server received a response with RCODE=ServerFailure from: 1.1.1.1
-   at DnsServerCore.Dns.DnsServer.RecursiveResolveAsync(DnsQuestionRecord question, IReadOnlyList`1 conditionalForwarders, Boolean dnssecValidation, Boolean cachePrefetchOperation, Boolean cacheRefreshOperation, TaskCompletionSource`1 taskCompletionSource) in Z:\Technitium\Projects\DnsServer\DnsServerCore\Dns\DnsServer.cs:line 2273
-[2022-08-08 17:24:20 UTC] [172.24.0.1:52652] [admin] User logged in.
-[2022-08-08 17:24:22 UTC] [172.24.0.1:52658] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 17:27:01 UTC] Saved zone file for domain: 58.176.35.in-addr.arpa
-[2022-08-08 17:27:01 UTC] [172.24.0.1:35184] [admin] New record was added to authoritative zone {domain: ns1.dev.1stcall.uk; type: A; value: ; ttl: 3600;}
-[2022-08-08 17:27:01 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 17:27:11 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 17:27:16 UTC] [3.8.21.85:23220] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 17:36:13 UTC] [94.3.33.239:50731] [TCP] DNS Server refused a zone transfer request since the request IP address is not allowed by the zone: 1stcall.uk
-[2022-08-08 17:39:26 UTC] [94.3.33.239:50675] [TCP] DNS Server refused a zone transfer request since the request IP address is not allowed by the zone: 1stcall.uk
-[2022-08-08 17:44:49 UTC] [172.24.0.1:48138] [admin] Primary zone options were updated successfully: 1stcall.uk
-[2022-08-08 17:44:49 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 17:44:57 UTC] [94.3.33.239:50717] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 17:45:38 UTC] [94.3.33.239:50699] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 17:49:39 UTC] [94.3.33.239:50703] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 17:49:47 UTC] [94.3.33.239:50687] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 18:39:25 UTC] [172.24.0.1:37522] [admin] User logged in.
-[2022-08-08 18:39:26 UTC] [172.24.0.1:40270] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 18:40:37 UTC] [172.24.0.1:43372] [admin] Primary zone options were updated successfully: 1stcall.uk
-[2022-08-08 18:40:37 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 18:43:19 UTC] DHCP Server successfully unloaded scope: Default
-[2022-08-08 18:43:19 UTC] DNS Server (v8.1.4.0) was stopped successfully.
-[2022-08-08 18:43:19 UTC] Logging stopped.
-[2022-08-08 18:43:41 UTC] Logging started.
-[2022-08-08 18:43:41 UTC] DNS Server config file was loaded: /etc/dns/config/dns.config
-[2022-08-08 18:43:42 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/ntp.org.zone
-[2022-08-08 18:43:42 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/1stcall.uk.zone
-[2022-08-08 18:43:42 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/0.0.c.5.2.0.0.c.0.2.0.c.3.0.6.2.ip6.arpa.zone
-[2022-08-08 18:43:42 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/102.40.13.in-addr.arpa.zone
-[2022-08-08 18:43:42 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/0.0.5.5.0.3.c.1.e.7.c.0.2.0.a.2.ip6.arpa.zone
-[2022-08-08 18:43:42 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/148.67.152.in-addr.arpa.zone
-[2022-08-08 18:43:42 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/0.0.4.c.0.f.8.0.c.1.0.d.5.0.a.2.ip6.arpa.zone
-[2022-08-08 18:43:42 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/21.8.3.in-addr.arpa.zone
-[2022-08-08 18:43:42 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/121.133.18.in-addr.arpa.zone
-[2022-08-08 18:43:42 UTC] DNS Server successfully loaded zone file: /etc/dns/config/zones/58.176.35.in-addr.arpa.zone
-[2022-08-08 18:43:42 UTC] DNS Server is loading allowed zone file: /etc/dns/config/allowed.config
-[2022-08-08 18:43:42 UTC] DNS Server is loading blocked zone file: /etc/dns/config/blocked.config
-[2022-08-08 18:43:42 UTC] DNS Server is reading block list from: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts
-[2022-08-08 18:43:42 UTC] [0.0.0.0:53] [UDP] DNS Server was bound successfully.
-[2022-08-08 18:43:42 UTC] [0.0.0.0:53] [TCP] DNS Server was bound successfully.
-[2022-08-08 18:43:42 UTC] [0.0.0.0:8053] [HTTP] DNS Server was bound successfully.
-[2022-08-08 18:43:42 UTC] [[::]:53] [UDP] DNS Server was bound successfully.
-[2022-08-08 18:43:42 UTC] [[::]:53] [TCP] DNS Server was bound successfully.
-[2022-08-08 18:43:42 UTC] [[::]:8053] [HTTP] DNS Server was bound successfully.
-[2022-08-08 18:43:42 UTC] DHCP Server successfully loaded scope: Default
-[2022-08-08 18:43:42 UTC] DHCP Server successfully loaded scope file: /etc/dns/config/scopes/Default.scope
-[2022-08-08 18:43:42 UTC] [0.0.0.0:5380] HTTP Web Service was started successfully.
-[2022-08-08 18:43:42 UTC] DNS Server (v8.1.4.0) was started successfully.
-[2022-08-08 18:43:42 UTC] DNS Server read block list file (140614 domains) from: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts
-[2022-08-08 18:43:43 UTC] DNS Server block list zone was loaded successfully.
-[2022-08-08 18:43:52 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 18:43:54 UTC] [172.25.0.1:37668] [admin] User logged in.
-[2022-08-08 18:43:56 UTC] [172.25.0.1:37680] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 18:44:21 UTC] Saved zone file for domain: 29.145.132.in-addr.arpa
-[2022-08-08 18:44:21 UTC] [172.25.0.1:45940] [admin] New record was added to authoritative zone {domain: test.1stcall.uk; type: A; value: ; ttl: 3600;}
-[2022-08-08 18:44:21 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 18:44:31 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 18:44:36 UTC] [3.8.21.85:23222] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 19:15:11 UTC] [172.25.0.1:38218] [admin] User logged in.
-[2022-08-08 19:15:13 UTC] [172.25.0.1:38228] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 19:15:40 UTC] [172.25.0.1:52454] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 19:16:12 UTC] Saved zone file for domain: 29.145.132.in-addr.arpa
-[2022-08-08 19:16:12 UTC] [172.25.0.1:47598] [admin] New record was added to authoritative zone {domain: db.test.1stcall.uk; type: A; value: ; ttl: 3600;}
-[2022-08-08 19:16:12 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 19:16:22 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 19:16:27 UTC] [3.8.21.85:23224] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 19:16:36 UTC] Saved zone file for domain: 29.145.132.in-addr.arpa
-[2022-08-08 19:16:36 UTC] [172.25.0.1:41916] [admin] New record was added to authoritative zone {domain: testapi.test.1stcall.uk; type: A; value: ; ttl: 3600;}
-[2022-08-08 19:16:36 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 19:16:46 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 19:16:51 UTC] [3.8.21.85:23226] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 21:35:20 UTC] [94.3.33.239:51463] [TCP] System.NullReferenceException: Object reference not set to an instance of an object.
-   at DnsServerCore.Dns.Zones.AuthZoneInfo..ctor(ApexZone apexZone, Boolean loadHistory) in Z:\Technitium\Projects\DnsServer\DnsServerCore\Dns\Zones\AuthZoneInfo.cs:line 286
-   at DnsServerCore.Dns.ZoneManagers.AuthZoneManager.GetAuthZoneInfo(String zoneName, Boolean loadHistory) in Z:\Technitium\Projects\DnsServer\DnsServerCore\Dns\ZoneManagers\AuthZoneManager.cs:line 944
-   at DnsServerCore.Dns.DnsServer.ProcessZoneTransferQueryAsync(DnsDatagram request, IPEndPoint remoteEP, DnsTransportProtocol protocol, String tsigAuthenticatedKeyName) in Z:\Technitium\Projects\DnsServer\DnsServerCore\Dns\DnsServer.cs:line 1230
-   at DnsServerCore.Dns.DnsServer.ProcessQueryAsync(DnsDatagram request, IPEndPoint remoteEP, DnsTransportProtocol protocol, Boolean isRecursionAllowed, Boolean skipDnsAppAuthoritativeRequestHandlers, String tsigAuthenticatedKeyName) in Z:\Technitium\Projects\DnsServer\DnsServerCore\Dns\DnsServer.cs:line 1182
-[2022-08-08 21:48:40 UTC] [172.25.0.1:56450] [admin] User logged in.
-[2022-08-08 21:48:42 UTC] [172.25.0.1:56450] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 21:49:47 UTC] Saved zone file for domain: 21.8.3.in-addr.arpa
-[2022-08-08 21:49:47 UTC] Saved zone file for domain: 65.11.3.in-addr.arpa
-[2022-08-08 21:49:47 UTC] [172.25.0.1:36482] [admin] Record was updated for authoritative zone {oldDomain: ns2.1stcall.uk; domain: ns2.1stcall.uk; type: A; oldValue: ; value: ; ttl: 3600; disabled: False;}
-[2022-08-08 21:49:47 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 21:49:57 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 21:50:02 UTC] [3.11.65.170:23232] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 21:50:47 UTC] Saved zone file for domain: 0.0.4.c.0.f.8.0.c.1.0.d.5.0.a.2.ip6.arpa
-[2022-08-08 21:50:47 UTC] [172.25.0.1:54334] [admin] New record was added to authoritative zone {domain: ns2.1stcall.uk; type: AAAA; value: ; ttl: 3600;}
-[2022-08-08 21:50:47 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 21:50:57 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 21:51:02 UTC] [3.11.65.170:23234] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 21:52:49 UTC] [172.25.0.1:44922] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
-[2022-08-08 21:56:45 UTC] Saved zone file for domain: 0.0.4.c.0.f.8.0.c.1.0.d.5.0.a.2.ip6.arpa
-[2022-08-08 21:56:45 UTC] [172.25.0.1:59420] [admin] New record was added to authoritative zone {domain: dev.1stcall.uk; type: AAAA; value: ; ttl: 3600;}
-[2022-08-08 21:56:45 UTC] Saved zone file for domain: 1stcall.uk
-[2022-08-08 21:56:55 UTC] DNS Server successfully notified name server 'ns2.1stcall.uk' for zone: 1stcall.uk
-[2022-08-08 21:57:00 UTC] [3.11.65.170:23244] [TCP] DNS Server received zone transfer request for zone: 1stcall.uk
-[2022-08-08 21:58:48 UTC] DNS Server successfully downloaded block list (4.89 MB): https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts
-[2022-08-08 21:58:48 UTC] DNS Server is reading block list from: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts
-[2022-08-08 21:58:49 UTC] DNS Server read block list file (140614 domains) from: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts
-[2022-08-08 21:58:49 UTC] DNS Server block list zone was loaded successfully.
-[2022-08-08 21:58:49 UTC] DNS Server config file was saved: /etc/dns/config/dns.config
-[2022-08-09 00:00:12 UTC] Logging stopped.
+[2022-08-08 17:10:39 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 17:10:39 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 17:10:39 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 17:25:39 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 17:25:39 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 17:25:39 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 17:27:11 UTC] [152.67.148.178:19930] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 17:27:16 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 17:27:16 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 17:27:16 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 17:42:16 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 17:42:16 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 17:42:16 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 17:57:16 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 17:57:16 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 17:57:16 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 18:12:16 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 18:12:16 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 18:12:16 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 18:27:16 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 18:27:16 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 18:27:16 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 18:42:16 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 18:42:16 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 18:42:16 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 18:43:52 UTC] [152.67.148.178:56007] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 18:44:31 UTC] [152.67.148.178:29567] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 18:44:36 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 18:44:36 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 18:44:36 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 18:59:36 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 18:59:36 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 18:59:36 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 19:14:36 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 19:14:36 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 19:14:36 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 19:16:22 UTC] [152.67.148.178:56187] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 19:16:27 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 19:16:27 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 19:16:27 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 19:16:46 UTC] [152.67.148.178:35490] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 19:16:51 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 19:16:51 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 19:16:51 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 19:31:51 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 19:31:51 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 19:31:51 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 19:46:51 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 19:46:51 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 19:46:51 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 20:01:51 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 20:01:51 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 20:01:51 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 20:16:51 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 20:16:51 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 20:16:51 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 20:31:51 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 20:31:51 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 20:31:51 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 20:46:51 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 20:46:51 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 20:46:51 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 21:01:51 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 21:01:51 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 21:01:51 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 21:16:51 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 21:16:51 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 21:16:51 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 21:31:51 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 21:31:51 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 21:31:51 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 21:46:51 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 21:46:51 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 21:46:51 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 21:49:57 UTC] [152.67.148.178:5556] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 21:50:02 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 21:50:02 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 21:50:02 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 21:50:57 UTC] [152.67.148.178:41013] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 21:51:02 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 21:51:02 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 21:51:02 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 21:52:25 UTC] [94.3.33.239:52200] [admin] User logged in.
+[2022-08-08 21:52:26 UTC] [94.3.33.239:52204] Check for update was done {updateAvailable: False; updateVersion: 8.1.4; updateTitle: New Update (v8.1.4) Available!; updateMessage: Follow the instructions from the link below to update the DNS server to the latest version. Once the DNS server update is install, update the DNS Apps too immediately. Read the change logs before installing the update to know if there are any breaking changes.; instructionsLink: https://blog.technitium.com/2017/11/running-dns-server-on-ubuntu-linux.html; changeLogLink: https://github.com/TechnitiumSoftware/DnsServer/blob/master/CHANGELOG.md;}
+[2022-08-08 21:56:55 UTC] [152.67.148.178:60400] [UDP] DNS Server received NOTIFY for zone: 1stcall.uk
+[2022-08-08 21:57:00 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 21:57:00 UTC] DNS Server successfully refreshed '1stcall.uk' secondary zone from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 21:57:00 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 22:12:00 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 22:12:00 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 22:12:00 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 22:27:00 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 22:27:00 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 22:27:00 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 22:42:00 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 22:42:00 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 22:42:00 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 22:57:00 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 22:57:00 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 22:57:00 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 23:12:00 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 23:12:00 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 23:12:00 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 23:27:00 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 23:27:00 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 23:27:00 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 23:42:00 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 23:42:00 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 23:42:00 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-08 23:57:00 UTC] DNS Server has started zone refresh for secondary zone: 1stcall.uk
+[2022-08-08 23:57:00 UTC] DNS Server successfully checked for '1stcall.uk' secondary zone update from: ns1.1stcall.uk (152.67.148.178)
+[2022-08-08 23:57:00 UTC] Saved zone file for domain: 1stcall.uk
+[2022-08-09 00:12:00 UTC] Logging stopped.
