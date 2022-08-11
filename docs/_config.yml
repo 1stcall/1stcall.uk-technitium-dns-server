@@ -29,7 +29,7 @@ twitter_username: 1stcall
 github_username:  1stcall
 
 # Build settings
-theme: jekyll-theme-dinky
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 
