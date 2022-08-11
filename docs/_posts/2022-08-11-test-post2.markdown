@@ -6,4 +6,4 @@ categories: testing
 ---
 Testing another post.
 
-[Home](https://git/1stcall.uk/1stcall.uk-technitium-dns-server)
+[Home](https://git.1stcall.uk/1stcall.uk-technitium-dns-server)
