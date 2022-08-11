@@ -44,4 +44,4 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 ### Latest posts.
 
-To see the latest posts, visit [latest]: https://git.1stcall.uk/1stcall.uk-technitium-dns-server/latest.
+To see the latest posts, visit [latest](https://git.1stcall.uk/1stcall.uk-technitium-dns-server/latest).
